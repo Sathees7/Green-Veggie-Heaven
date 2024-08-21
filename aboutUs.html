@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Veggie Heaven</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(e){
+          e.preventDefault();
+  
+          Email.send({
+              Host : "smtp.elasticemail.com",
+              Username : "greenveggi07@gmail.com",
+              Password : "C09E31E9521E6B6D83D1A0047E097DB6CDDD",
+              To : 'greenveggi07@gmail.com',
+              From : 'greenveggi07@gmail.com',
+              Subject : document.getElementById('exampleFormControlSubject').value,
+              Body : document.getElementById('exampleFormControlTextareal').value
+          }).then(
+              message => alert(message)
+          );
+  
+          return true;
+      }
+      </script>
+   <style>
+     
+    .containerA {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px;
+      margin-top: 80px;
+      font-size: large;
+    }
+    section {
+      margin-bottom: 0px;
+    }
+    section h2 {
+      color: #192a56;
+    }
+    section p {
+      line-height: 1.5;
+      font-size: medium;
+      color: #666;
+    }
+    footer {
+      background-color: #77dd77;
+      padding: 10px;
+      text-align: center;
+    }
+
+
+
+
+
+
+
+#enquiry button[type="submit"] {
+border-radius: 20px;
+border: 1px solid #27ae60;
+background-color: #27ae60;
+color: #FFFFFF;
+font-size: 12px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+#enquiry input{
+background-color: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+width: 100%;
+}
+#enquiry textarea{
+background-color: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+width: 100%;
+}
+.containerA h2{
+margin-bottom: 10px;
+}
+  </style>
+</head>
+<body>
+	<header>
+	    <a href="./index.php" class="logo"><i class="fas fa-carrot"></i>Green Veggie Heaven</a>
+	    <nav class="navbar">
+	        <a href="./index.php">Home</a>
+	        <a href="./Dishes.php">dishes</a>
+	        <a class="active" href="./aboutUs.html">about</a>
+	        <a href="./promotion.php">Offers</a>
+	        <a href="./feedback.php">review</a>
+	        <a href="./login.php">Login</a>
+	    </nav>
+	    <div class="icons">
+	        <i class="fas fa-bars" id="menu-bars"></i>
+	        <i class="fas fa-search" id="search-icon"></i>
+	        <a href="./myAccount.php" class="fas fa-user"></a>
+			<a href="./card.php" class="fas fa-shopping-cart"></a>
+	    </div>
+
+	</header>
+
+    <!-- search form -->
+	<form action="" id="search-form">
+		<input type="search" name="" placeholder="Search here..." id="search-box">
+		<label for="search-box" class="fas fa-search"></label>
+		<i class="fas fa-times" id="close"></i>
+	</form>
+
+    <!-- dishes -->
+    <div class="containerA">
+      <section id="vision">
+        <h2>Our Vision</h2>
+        <p>At Green Vege Heaven, we envision a world where plant-based living is embraced as the norm, and every meal celebrates the abundance of nature without compromising on taste or sustainability.</p>
+      </section>
+      <section id="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to nourish both body and planet through the power of plant-based eating. We strive to provide a diverse array of wholesome and flavorful options that contribute to a healthier, more compassionate world.</p>
+      </section>
+      <section id="quality">
+        <h2>Quality of Our Food</h2>
+        <p>At Green Vege Heaven, we are committed to sourcing the freshest ingredients and preparing them with care to ensure the highest quality in every dish. Our culinary team crafts each meal with passion and creativity, delivering delicious vegetarian options that satisfy both the palate and the soul.</p>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feedback, or inquiries, please don't hesitate to contact us:</p>
+        <p>Email: info@greenvegeheaven.com</p>
+        <p>Phone: 123-456-7890</p>
+      </section>
+      <section id="enquiry">
+        <h2>Any Clarification</h2>
+        <form class="" method="post" onsubmit="sendEmail(event)">
+          Subject<input type="text" name="subject" value="" id="exampleFormControlSubject"><br>
+          Message<textarea rows="3" cols="3" name="message" value="" id="exampleFormControlTextareal"></textarea><br>
+          <button type="submit" name="send">Send</button>
+      </form> 
+      </section>
+
+  </div>
+
+
+    <!-- Footer -->
+	<section class="footer">
+        <div class="fbox">
+            <h3>Contact Info</h3>
+		    <p>R. vimalraj</p>
+		    <p>+94773344314</p>
+		    <p>greenveggieheaven@gmail.com</p>
+		    <p>vimalraj@gmail.com</p>
+		    <p>1st Street,Pettah</p>
+        </div>
+		<div class="credit">Copyright @ 2024 by <span>Mr Sathees</span></div>
+	</section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const categoryForm = document.getElementById("category-form");
+
+            categoryForm.addEventListener("change", function() {
+             
+                categoryForm.submit();
+            });
+        });
+    </script>
+
+</body>
+</html>
